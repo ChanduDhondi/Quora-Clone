@@ -1,0 +1,22 @@
+<% layout('/layouts/boilerplate') %>
+<div class="new-container">
+    <form action="/signup" method="POST" name="new-user" class="new-post" id="userForm">
+        <legend>Register User</legend>
+        <div class="group">
+            <label for="username">Username:</label><br>
+            <input  name="username" type="text" id="username" minlength="4" maxlength="100">
+            <div id="usernameError" class="error"></div>
+        </div>
+        <div class="group">
+            <label for="email">Email:</label><br>
+            <input name="email" id="email" type="email" minlength="4"></input>
+            <div id="emailError" class="error"></div>
+        </div>
+        <div class="group">
+            <label for="password">Password:</label><br>
+            <input name="password" id="password" type="password" minlength="4"></input>
+            <div id="passwordError" class="error"></div>
+        </div>
+        <button type="submit" >Register User</button>
+    </form>
+</div>

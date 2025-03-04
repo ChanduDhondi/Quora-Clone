@@ -1,0 +1,66 @@
+<% layout('/layouts/boilerplate') %>
+<%= success %>
+<div class="home-container">
+    <div class="q-box">
+        <div class="img-box">
+            <img src="" alt="" style="margin-right: 1em;">
+            <div>What do you want to ask or share ?</div>
+        </div>
+
+        <div class="buttons">
+            <a href="/post/new"><i class="fa-regular fa-message"></i> <span style="margin-right: 1rem;">Ask</span> <div>|</div></a>
+            <a href="/post/new"><i class="fa-regular fa-pen-to-square"></i> <span style="margin-right: 1rem;">Answer</span> <div>|</div></a>
+            <a href="/post/new"><i class="fa-solid fa-pen"></i> <span>Post</span></a>
+        </div>
+    </div>
+
+    <% for(post of posts) {%>
+        <div class="post">
+            <div class="post-header">
+                <div class="post-img">
+                    <img src="" alt="img">
+                </div>
+                <div class="post-header-content">
+                    <div class="post-profile">
+                        <h4> <% post.author %> </h4>
+                        <a href="#">Follow</a>
+                        <a type="button" id="cross"><span>&times;</span></a>
+                    </div>
+                    <div class="post-time"><%= post.date.toString().split(" ", 5).join(' ') %></div>
+                </div>
+            </div>
+
+            <div class="post-body">
+                <div class="post-title">
+                    <h3><%= post.title %></h3>
+                </div>
+                <div class="post-description">
+                    <%= post.description %>
+                </div>
+                <!-- <% if(post.image) {%>
+                    <div class="post-image">
+                        <%= post.image %>
+                    </div>
+                <% } %> -->
+            </div>
+
+            <div class="post-foter">
+                <div class="vote">
+                    <div class="upvote"><i class="fa-solid fa-arrow-right" style="transform: rotate(-0.25turn); color: #2e69ff;"></i></div>
+                    <div>Upvote</div>
+                    <div>•</div>
+                    <div>3.6k</div>
+                    <div class="line">|</div>
+                    <div class="downvote"><i class="fa-solid fa-arrow-right" style="transform: rotate(.25turn);"></i></div>
+                </div>
+                <div class="comment">
+                    <i class="fa-regular fa-comment"></i> <span>111</span>
+                </div>
+                <div class="share">
+                    <i class="fa-solid fa-rotate"></i> <span>42</span>
+                </div>
+                <div class="settings"><i class="fa-solid fa-ellipsis"></i></div>
+            </div>
+        </div>
+    <% } %>
+</div>

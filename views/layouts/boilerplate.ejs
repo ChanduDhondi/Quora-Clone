@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q&A</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <nav>
+        <div class="navbar">
+            <div class="nav-logo">
+                <b>Q&A</b>
+            </div>
+            <ul>
+                <li class="nav-li"><a href="/" class="nav-link"><i class="fa-solid fa-house"></i></a></li>
+                <li class="nav-li"><a href="/post/new" class="nav-link"><i class="fa-regular fa-pen-to-square"></i></a></li>
+                <li class="nav-li"><input type="text" placeholder="&#x1F50D; Search Q&A" name="search" id="searchbar"></li>
+                <li class="nav-li"><a href="#" class="nav-link"><img src="" class="profile image"/></a></li>
+                <li class="nav-li"><a href="#" class="nav-link"><i class="fa-solid fa-right-from-bracket"></i></a></li>
+            </ul>
+        </div>
+    </nav>
+    <main>
+        <section>
+            <%- include('../includes/sidebar.ejs') %>
+        </section>
+        <section>
+            <%= success %>
+            <%- body %>
+        </section>        
+    </main>
+
+    <script src="/js/main.js" async></script>
+</body>
+</html>

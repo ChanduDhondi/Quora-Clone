@@ -1,0 +1,17 @@
+<% layout('/layouts/boilerplate') %>
+<div class="new-container">
+    <form action="/post" method="POST" name="new-post" class="new-post" id="postForm">
+        <legend>Create New Post</legend>
+        <div class="group">
+            <label for="title">Title:</label><br>
+            <input  name="title" type="text" id="title" minlength="4" maxlength="100">
+            <div id="titleError" class="error"></div>
+        </div>
+        <div class="group">
+            <label for="description">Description:</label><br>
+            <textarea name="description" id="description" rows="5"></textarea>
+            <div id="descriptionError" class="error"></div>
+        </div>
+        <button type="submit" >Add Post</button>
+    </form>
+</div>
